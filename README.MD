@@ -67,9 +67,11 @@ O template segue uma organização por camadas:
 ## Boas práticas para evolução do template
 
 - Manter funções pequenas e específicas por módulo.
+- Escrever docstrings no formato Sphinx em funções, classes e módulos.
 - Evitar lógica de negócio em `main.py`; concentrar em `pipelines/` e `transform/`.
 - Usar `config/settings.py` para evitar caminhos hardcoded.
 - Salvar versões de saída com timestamp quando fizer sentido (já suportado em `utils/file_io.py`).
+- Manter um padrão de nomes de arquivos: o arquivo gerado deve incluir sufixo de timestamp (até minutos) no padrão definido por `timestamp_fmt`. Exemplo: `minha_base__2026-02-02_09-30.parquet`.
 - Priorizar persistência em `.parquet` para datasets analíticos.
 
 ### Por que priorizar `.parquet`
