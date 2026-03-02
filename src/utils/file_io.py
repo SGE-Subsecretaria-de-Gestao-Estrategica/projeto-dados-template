@@ -79,6 +79,9 @@ def save_dataframe(
     """
     Salva um DataFrame em ``pkl``, ``parquet`` ou ``csv`` com timestamp no nome.
 
+    O arquivo gerado sempre inclui um sufixo de timestamp (até minutos) no padrão definido
+    por ``timestamp_fmt``. Exemplo: ``minha_base__2026-02-02_09-30.parquet``.
+       
     :param df: DataFrame a ser salvo.
     :type df: pandas.DataFrame
     :param output_folder: Diretório de saída.
